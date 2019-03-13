@@ -21,6 +21,9 @@ class TodoItem extends Component {
                             this.props.toggleComplete.bind(this, id)
                         } /> {' '}
                     {title}
+                    <button
+                        onClick = {this.props.deleteTodo.bind(this, id)}
+                        style   = {btnStyle}>x</button>
                 </p>
             </div>
         );
@@ -29,6 +32,17 @@ class TodoItem extends Component {
 
 TodoItem.propTypes = {
     todo: PropTypes.object.isRequired
+}
+
+const btnStyle = {
+    backgroundColor: "#ff0000",
+    color          : "#fff",
+    border         : "none",
+    padding        : "5px 10px",
+    borderRadius   : "50%",
+    cursor         : "pointer",
+    float          : "right",
+    fontWeight     : "bold"
 }
 
 export default TodoItem;
