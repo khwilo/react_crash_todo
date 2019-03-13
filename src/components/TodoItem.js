@@ -3,14 +3,8 @@ import PropTypes from 'prop-types';
 
 class TodoItem extends Component {
     getStyle = () => {
-        if(this.props.todo.completed) {
-            return {
-                textDecoration: 'line-through'
-            }
-        } else {
-            return {
-                textDecoration: 'none'
-            }
+        return {
+            textDecoration: this.props.todo.completed ? 'line-through': 'none'
         }
     }
     render() {
