@@ -13,7 +13,10 @@ class TodoItem extends Component {
     render() {
         return (
             <div style={this.getStyle()}>
-                <p>{this.props.todo.title}</p>
+                <p>
+                    <input type="checkbox" /> {' '}
+                    {this.props.todo.title}
+                </p>
             </div>
         );
     }
